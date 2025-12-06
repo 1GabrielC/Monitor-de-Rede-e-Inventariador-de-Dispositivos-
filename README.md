@@ -1,1 +1,4 @@
-# Monitor-de-Rede-e-Inventariador-de-Dispositivos
+## Instalação
+1. Instalar dependências:
+   
+   npm install
