@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitor e Inventário de Dispositivos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Monitor de Rede</h1>
+
+    <section id="cadastro">
+        <h2>Cadastrar Dispositivo</h2>
+        <form id="form-cadastro">
+            <input type="text" id="nome_dispositivo" placeholder="Nome do dispositivo" required>
+            <input type="text" id="ip" placeholder="IP" required>
+            <input type="number" id="porta" placeholder="Porta" required>
+            <input type="text" id="localizacao" placeholder="Localização">
+            <input type="number" id="id_usuario" placeholder="ID Usuário">
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+
+    <section id="lista">
+        <h2>Dispositivos Cadastrados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>IP</th>
+                    <th>Porta</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-dispositivos"></tbody>
+        </table>
+    </section>
+
+    <section id="logs">
+        <h2>Logs de Ação</h2>
+        <button onclick="carregarLogs()">Atualizar Logs</button>
+        <ul id="lista-logs"></ul>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2>Histórico de Testes</h2>
+            <ul id="lista-historico"></ul>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
